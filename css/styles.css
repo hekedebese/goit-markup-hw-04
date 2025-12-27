@@ -83,7 +83,6 @@ img {
 }
 
 .icon {
-  height: 64px;
   fill: none;
 }
 
@@ -216,6 +215,7 @@ address {
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -425,15 +425,26 @@ footer {
   display: flex;
   gap: 16px;
   margin-top: 16px;
+  /* align-items: center; */
 }
 
-.footer-icon .icon-list {
+.footer-icon-list {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
 }
 
-.footer-icon .icon-list:hover,
-.footer-icon .icon-list:active {
+.footer-icon-list:hover,
+.footer-icon-list:active {
   background-color: #31d0aa;
+}
+
+.footer-icon-list .icon {
+  width: 24px;
+  height: 24px;
 }
