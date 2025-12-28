@@ -82,6 +82,10 @@ img {
   padding: 120px 0;
 }
 
+.icon {
+  fill: none;
+}
+
 /* __________HEADER__________ */
 
 .logo {
@@ -111,6 +115,8 @@ img {
 
 header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 header a {
@@ -124,6 +130,10 @@ header a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link a:hover,
@@ -131,8 +141,15 @@ header a {
   color: #404bbf;
 }
 
-.nav-studio:active {
-  text-decoration: underline;
+.nav-studio::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: #404bbf;
+  border-radius: 2px;
+  content: "";
 }
 
 address {
@@ -165,6 +182,15 @@ address {
 
 .main {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-title {
@@ -188,6 +214,10 @@ address {
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-title-button:hover,
@@ -210,6 +240,16 @@ address {
   width: calc((100% - 72px) / 4);
 }
 
+.features-icon-box {
+  border: 1px solid #434455;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
 /* __________TEAM__________ */
 
 .team {
@@ -221,7 +261,7 @@ address {
   margin-bottom: 72px;
 }
 
-.team li {
+.team li:not(.team-box ul > li) {
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -248,6 +288,29 @@ address {
 
 .team-list li {
   width: calc((100% - 72px) / 4);
+}
+
+.team-box a {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-box a:hover {
+  background-color: #404bbf;
+}
+
+.team-box ul {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
 }
 
 /* __________PORTFOLIO__________ */
@@ -286,15 +349,55 @@ footer {
   padding: 100px 0;
 }
 
+footer > .container {
+  display: flex;
+}
+
 .studio {
   color: #f4f4fd;
 }
 
 .footer-text {
   width: 264px;
+  margin-right: 120px;
 }
 
 .footer-text .logo {
   display: block;
   margin-bottom: 16px;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: column;
+  width: 208px;
+}
+
+.footer-icon p {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-icon ul {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-icon a {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon a:hover {
+  background-color: #31d0aa;
 }
