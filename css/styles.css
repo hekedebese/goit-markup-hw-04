@@ -189,8 +189,9 @@ address {
     ),
     url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .main-title {
@@ -241,13 +242,14 @@ address {
 }
 
 .features-icon-box {
-  border: 1px solid #434455;
+  border: 1px solid #8e8f99;
   border-radius: 4px;
   background-color: #f4f4fd;
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  align-items: center;
+  height: 112px;
 }
 
 /* __________TEAM__________ */
@@ -303,7 +305,8 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-box a:hover {
+.team-box a:hover,
+.team-box a:focus {
   background-color: #404bbf;
 }
 
@@ -311,6 +314,10 @@ address {
   display: flex;
   gap: 24px;
   margin-top: 8px;
+}
+
+.team-box .icon {
+  fill: #ffffff;
 }
 
 /* __________PORTFOLIO__________ */
@@ -390,6 +397,7 @@ footer {
 
 footer > .container {
   display: flex;
+  gap: 120px;
 }
 
 .studio {
@@ -398,7 +406,6 @@ footer > .container {
 
 .footer-text {
   width: 264px;
-  margin-right: 120px;
 }
 
 .footer-text .logo {
@@ -410,6 +417,8 @@ footer > .container {
   display: flex;
   flex-direction: column;
   width: 208px;
+  justify-content: space-between;
+  height: 80px;
 }
 
 .footer-icon p {
@@ -421,7 +430,6 @@ footer > .container {
 .footer-icon ul {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
 }
 
 .footer-icon a {
@@ -437,6 +445,11 @@ footer > .container {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icon a:hover {
+.footer-icon a:hover,
+.footer-icon a:focus {
   background-color: #31d0aa;
+}
+
+.footer-icon .icon {
+  fill: #ffffff;
 }
